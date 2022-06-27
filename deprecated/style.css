@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap');
+
+:root {
+  font-size: 16px;
+  font-family: 'Fira Mono';
+
+  /*GRUVBOX COLORS*/
+
+  --green: #98971a;
+
+  --orange0: #d65d0e;
+  --orange1: #fe8019;
+
+  --bg0_h: #1d2021;
+  --bg0: #282828;
+  --bg1: #3c3836;
+  --bg2: #504945;
+  --bg3: #665c54;
+  --bg4: #7c6f64;
+  --gray: #928374;
+  --fg0: #fbf1c7;
+  --fg1: #ebdbb2;
+  --fg2: #d5c4a1;
+  --fg3: #bdae93;
+  --fg4: #a89984;
+}
+
+* {
+  user-select: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: max(100vw, 58rem);
+  background-color: var(--bg0_h);
+  display: flex;
+  justify-content: space-around;
+}
+
+.pageContainer {
+  height: 100%;
+  width: max(80rem, 60%);
+
+  display: grid;
+  grid-template-columns: max(20%, 21rem) max(60%, 40rem);
+  grid-template-rows: 1fr 4fr;
+  /*--grid-gap: 1rem;*/
+}
+
+.gridElement {
+  /*margin: var(--grid-gap);*/
+  /*box-shadow: 1px 0px 5px 2px black;*/
+  /*border: 1px solid var(--bg1);*/
+  /*border-radius: 0.3rem;*/
+}
+
+.header {
+  margin-left: 0;
+  background-color: var(--bg0);
+  color: var(--orange0);
+  grid-column-start: 2;
+  font-weight: bolder;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 2.5rem;
+}
+
+.sidebarTop {
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg0);
+}
+
+.logoContainer {
+  display: flex;
+}
+
+.logo,
+.logoText {
+  align-self: center;
+}
+
+.logo {
+  height: 4rem;
+  width: 4rem;
+  border: 5px dotted var(--orange0);
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
+.logoText {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  font-family: 'Krona One';
+  letter-spacing: -2px;
+  border-bottom: 10px solid white;
+}
+
+.sidebar {
+  margin-top: 0;
+  background-color: var(--bg0);
+  grid-row-start: 2;
+  grid-row-end: -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.sidebarMenu {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar li {
+  list-style: none;
+  color: white;
+  background-color: var(--bg0_h);
+  width: 100%;
+  border: 1px solid var(--orange0);
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Fira Mono';
+  font-weight: bolder;
+  font-size: 1rem;
+  letter-spacing: 5px;
+}
+
+.content {
+  margin-top: 0;
+  margin-left: 0;
+  background-color: var(--bg0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todoList {
+  width: 39rem;
+  height: 90%;
+  background-color: var(--bg1);
+  border-radius: 5px;
+  display: grid;
+  grid-auto-rows: 6rem;
+
+  overflow: scroll;
+}
+
+.smallIcon {
+  height: 3rem;
+  width: 3rem;
+}
+
+.todoList > div {
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+  color: white;
+}
+
+.todoRow:nth-of-type(odd) {
+  background-color: rgb(0, 0, 0, 0.5);
+}
+
+.todoList > div > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todoHead {
+  background-color: var(--bg0_h);
+  font-size: 4rem;
+}

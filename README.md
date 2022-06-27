@@ -1,8 +1,5 @@
 # TODO LIST
 
-- fikse neste todo element
-- events
-
 ## FEATURES
 
 - title
